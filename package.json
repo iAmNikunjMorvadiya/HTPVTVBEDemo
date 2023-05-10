@@ -1,5 +1,5 @@
 {
-  "name": "HTPVTVBE",
+  "name": "HTPVTVBEDemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Darshan072/HTPVTVBE.git"
+    "url": "git+https://github.com/iAmNikunjMorvadiya/HTPVTVBEDemo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Darshan072/HTPVTVBE/issues"
+    "url": "https://github.com/iAmNikunjMorvadiya/HTPVTVBEDemo/issues"
   },
-  "homepage": "https://github.com/Darshan072/HTPVTVBE#readme",
+
   "dependencies": {
     "auth0": "^3.3.0",
     "bcrypt": "^5.1.0",
