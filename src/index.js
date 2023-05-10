@@ -38,14 +38,30 @@ app.use(express.json())
 // })
 
 app.get('/api/public', function (req, res) {
-  const connection = mysql.createConnection(dbConfig);
-  const rows = connection.query('SELECT * FROM users');
-  console.log(rows)
-  connection.end();
-  const user = rows[0];
-  if (!user) {
-    return res.status(401).send('Invalid credentials');
-  }
+    const connection = mysql.createConnection(dbConfig);
+    // const rows = connection.query('select * from Users');
+    // console.log(rows)
+    // connection.end();
+
+    // const user = rows[0];
+    // res.json(user);
+    // if (!user) {
+    //   return res.status(401).send('Invalid credentials');
+    // }
+
+
+    connection.query('SELECT * FROM Users', (err, rows) => {
+        if (err) {
+            console.error('Error executing MySQL query:', err.stack);
+            return;
+        }
+
+        console.log('Data received from MySQL database:');
+        //console.log(rows);
+        res.json(rows);
+    });
+
+    connection.end();
 });
 
 app.get('/api/private', function (req, res) {
